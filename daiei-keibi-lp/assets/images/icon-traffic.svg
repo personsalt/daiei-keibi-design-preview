@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">交通誘導警備</title>
+  <circle cx="48" cy="48" r="46" fill="#F5F7F9"/>
+  <path d="M30 72h36M38 72l5-28h10l5 28" fill="none" stroke="#0B1F33" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M39 58h18M41 48h14" stroke="#E97824" stroke-width="5"/>
+  <path d="M29 28h38v16H29z" fill="#F4C430" stroke="#0B1F33" stroke-width="4"/>
+  <path d="m37 36 6-8m7 16 7-16" stroke="#0B1F33" stroke-width="4"/>
+</svg>
+
