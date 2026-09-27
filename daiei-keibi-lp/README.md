@@ -242,3 +242,7 @@ daiei-keibi-lp/
 - テキストドメイン：`daiei-keibi-lp`
 - バージョン：2.0.0
 - ライセンス：GNU General Public License v2 or later
+
+## トップ背景画像（2026年9月更新）
+
+トップ背景は、提供された実際の制服・隊員写真と会社ロゴを参照して生成した `hero-daiei-generated-v1.webp` を使用しています。写真をもとにした合成イメージです。元画像は同名のPNG、生成指示は同名の `.prompt.txt` に保存しています。現場・制服と寮の写真欄は引き続き実写真を掲載しています。

@@ -4522,3 +4522,34 @@ body:not(.home) .site-brand__text small {
 .dorm__contact p { margin: 0; }
 @media (max-width: 900px) { .photo-gallery--team, .photo-gallery--dorm { grid-template-columns: repeat(2, minmax(0, 1fr)); } .dorm__contact { align-items: flex-start; flex-direction: column; } }
 @media (max-width: 540px) { .photo-gallery { gap: 20px 12px; } .photo-gallery__item figcaption { font-size: .8rem; } }
+
+/* Branded hero: preserve the full logo and staff faces across screen sizes. */
+.hero {
+ min-height: clamp(760px, 56.25vw, 1000px);
+ background:
+  linear-gradient(90deg, transparent 48%, rgb(7 24 39 / 18%) 65%, rgb(7 24 39 / 35%) 100%),
+  var(--hero-image, url("../images/hero-daiei-generated-v1.webp")) left 78px / 100% auto no-repeat,
+  var(--color-main);
+}
+.hero__inner { min-height: clamp(760px, 56.25vw, 1000px); }
+.hero__content { width: 44%; padding: 100px 0 64px; }
+.hero__title { font-size: clamp(2.6rem, 3.5vw, 4.4rem); }
+.hero__actions { flex-direction: column; align-items: stretch; }
+.hero__actions .button { min-width: 0; }
+@media screen and (max-width: 900px) {
+ .hero {
+  --hero-photo-height: clamp(300px, 88vw, 430px);
+  min-height: 0;
+  background:
+   linear-gradient(180deg, transparent calc(70px + var(--hero-photo-height) - 40px), var(--color-main) calc(70px + var(--hero-photo-height))),
+   var(--hero-image, url("../images/hero-daiei-generated-v1.webp")) left 70px / auto var(--hero-photo-height) no-repeat,
+   var(--color-main);
+ }
+ .hero__inner { min-height: 0; }
+ .hero__content { width: 100%; padding: calc(var(--hero-photo-height) + 30px) 0 62px; }
+ .hero__title { font-size: clamp(2.3rem, 7vw, 3.5rem); }
+}
+@media screen and (max-width: 540px) {
+ .hero__actions .button { padding-inline: 20px; gap: 12px; font-size: .9rem; }
+ .hero__actions .button__eyebrow { display: none; }
+}
