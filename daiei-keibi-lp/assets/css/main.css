@@ -1618,6 +1618,68 @@ body:not(.home) .site-brand__text small {
 	background: var(--color-bg);
 }
 
+.benefits__care {
+	display: grid;
+	grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.6fr);
+	gap: clamp(24px, 4vw, 64px);
+	align-items: center;
+	margin-bottom: 56px;
+}
+
+.benefits__care-copy h3 {
+	margin: 14px 0 22px;
+	color: var(--color-main);
+	font-size: clamp(1.6rem, 2.5vw, 2.6rem);
+	line-height: 1.45;
+}
+
+.benefits__care-copy > p:last-child {
+	margin: 0;
+	color: var(--color-muted);
+	line-height: 1.9;
+}
+
+.benefits__photos {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.benefits__photos figure {
+	position: relative;
+	min-width: 0;
+	margin: 0;
+	overflow: hidden;
+	background: #dce5e8;
+}
+
+.benefits__photos img {
+	display: block;
+	width: 100%;
+	border-radius: 0;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+
+.benefits__photos figcaption {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 28px 14px 10px;
+	background: linear-gradient(transparent, rgb(8 28 45 / 78%));
+	color: #fff;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+@media (max-width: 800px) {
+	.benefits__care {
+		grid-template-columns: 1fr;
+		margin-bottom: 36px;
+	}
+}
+
 .benefits__grid {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
@@ -4108,11 +4170,11 @@ body:not(.home) .site-brand__text small {
 	}
 
 	.service-card:nth-child(2) {
-		background: linear-gradient(180deg, transparent 20%, rgb(7 24 39 / 90%) 100%), url("../images/photo-about.jpg") 58% center / cover no-repeat;
+		background: linear-gradient(180deg, transparent 20%, rgb(7 24 39 / 90%) 100%), url("../images/service-parking.jpg") 58% center / cover no-repeat;
 	}
 
 	.service-card:nth-child(3) {
-		background: linear-gradient(180deg, transparent 20%, rgb(7 24 39 / 88%) 100%), url("../images/photo-philosophy.jpg") 65% center / cover no-repeat;
+		background: linear-gradient(180deg, transparent 20%, rgb(7 24 39 / 88%) 100%), url("../images/service-crowd.jpg") 40% center / cover no-repeat;
 	}
 
 	.service-card::before {
